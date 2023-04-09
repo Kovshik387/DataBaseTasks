@@ -43,27 +43,35 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nameUser = new System.Windows.Forms.TextBox();
-            this.nameSurname = new System.Windows.Forms.TextBox();
-            this.userContact = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.userSex = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.AddUser = new System.Windows.Forms.Button();
-            this.DeleteUser = new System.Windows.Forms.Button();
-            this.UpdateUser = new System.Windows.Forms.Button();
-            this.Truncate = new System.Windows.Forms.Button();
-            this.Clear = new System.Windows.Forms.Button();
-            this.idNumeric = new System.Windows.Forms.NumericUpDown();
             this.refresh = new System.Windows.Forms.Button();
+            this.idNumeric = new System.Windows.Forms.NumericUpDown();
+            this.Clear = new System.Windows.Forms.Button();
+            this.Truncate = new System.Windows.Forms.Button();
+            this.UpdateUser = new System.Windows.Forms.Button();
+            this.DeleteUser = new System.Windows.Forms.Button();
+            this.AddUser = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.userSex = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.userContact = new System.Windows.Forms.TextBox();
+            this.nameSurname = new System.Windows.Forms.TextBox();
+            this.nameUser = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.ExportToWord = new System.Windows.Forms.Button();
+            this.ExportToExcel = new System.Windows.Forms.Button();
+            this.ExecuteTask11 = new System.Windows.Forms.Button();
+            this.dataGridTask11 = new System.Windows.Forms.DataGridView();
+            this.ExecuteTask12 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTask11)).BeginInit();
             this.SuspendLayout();
             // 
             // AddColumn
@@ -174,6 +182,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -228,61 +237,81 @@
             this.tabPage2.Text = "Манипуляция";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // refresh
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(542, 273);
-            this.dataGridView1.TabIndex = 0;
+            this.refresh.Location = new System.Drawing.Point(302, 352);
+            this.refresh.Name = "refresh";
+            this.refresh.Size = new System.Drawing.Size(75, 23);
+            this.refresh.TabIndex = 16;
+            this.refresh.Text = "refresh";
+            this.refresh.UseVisualStyleBackColor = true;
+            this.refresh.Click += new System.EventHandler(this.refresh_Click);
             // 
-            // nameUser
+            // idNumeric
             // 
-            this.nameUser.Location = new System.Drawing.Point(6, 295);
-            this.nameUser.Name = "nameUser";
-            this.nameUser.Size = new System.Drawing.Size(129, 20);
-            this.nameUser.TabIndex = 1;
+            this.idNumeric.Location = new System.Drawing.Point(464, 294);
+            this.idNumeric.Name = "idNumeric";
+            this.idNumeric.Size = new System.Drawing.Size(75, 20);
+            this.idNumeric.TabIndex = 15;
             // 
-            // nameSurname
+            // Clear
             // 
-            this.nameSurname.Location = new System.Drawing.Point(6, 321);
-            this.nameSurname.Name = "nameSurname";
-            this.nameSurname.Size = new System.Drawing.Size(129, 20);
-            this.nameSurname.TabIndex = 2;
+            this.Clear.Location = new System.Drawing.Point(383, 323);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(75, 23);
+            this.Clear.TabIndex = 14;
+            this.Clear.Text = "Clear";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
-            // userContact
+            // Truncate
             // 
-            this.userContact.Location = new System.Drawing.Point(6, 347);
-            this.userContact.Name = "userContact";
-            this.userContact.Size = new System.Drawing.Size(129, 20);
-            this.userContact.TabIndex = 3;
+            this.Truncate.Location = new System.Drawing.Point(383, 352);
+            this.Truncate.Name = "Truncate";
+            this.Truncate.Size = new System.Drawing.Size(75, 23);
+            this.Truncate.TabIndex = 13;
+            this.Truncate.Text = "Trunc";
+            this.Truncate.UseVisualStyleBackColor = true;
+            this.Truncate.Click += new System.EventHandler(this.Truncate_Click);
             // 
-            // label5
+            // UpdateUser
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(142, 301);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Имя";
+            this.UpdateUser.Location = new System.Drawing.Point(464, 323);
+            this.UpdateUser.Name = "UpdateUser";
+            this.UpdateUser.Size = new System.Drawing.Size(75, 23);
+            this.UpdateUser.TabIndex = 12;
+            this.UpdateUser.Text = "Update";
+            this.UpdateUser.UseVisualStyleBackColor = true;
+            this.UpdateUser.Click += new System.EventHandler(this.UpdateUser_Click);
             // 
-            // label6
+            // DeleteUser
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(145, 327);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Фамилия";
+            this.DeleteUser.Location = new System.Drawing.Point(464, 352);
+            this.DeleteUser.Name = "DeleteUser";
+            this.DeleteUser.Size = new System.Drawing.Size(75, 23);
+            this.DeleteUser.TabIndex = 11;
+            this.DeleteUser.Text = "Delete";
+            this.DeleteUser.UseVisualStyleBackColor = true;
+            this.DeleteUser.Click += new System.EventHandler(this.DeleteUser_Click);
             // 
-            // label7
+            // AddUser
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(145, 353);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Контактные данные";
+            this.AddUser.Location = new System.Drawing.Point(383, 291);
+            this.AddUser.Name = "AddUser";
+            this.AddUser.Size = new System.Drawing.Size(75, 23);
+            this.AddUser.TabIndex = 10;
+            this.AddUser.Text = "Add";
+            this.AddUser.UseVisualStyleBackColor = true;
+            this.AddUser.Click += new System.EventHandler(this.AddUser_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(292, 297);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(27, 13);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Пол";
             // 
             // userSex
             // 
@@ -295,81 +324,123 @@
             this.userSex.Size = new System.Drawing.Size(67, 21);
             this.userSex.TabIndex = 8;
             // 
-            // label8
+            // label7
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(292, 297);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(27, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Пол";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(145, 353);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(109, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Контактные данные";
             // 
-            // AddUser
+            // label6
             // 
-            this.AddUser.Location = new System.Drawing.Point(383, 291);
-            this.AddUser.Name = "AddUser";
-            this.AddUser.Size = new System.Drawing.Size(75, 23);
-            this.AddUser.TabIndex = 10;
-            this.AddUser.Text = "Add";
-            this.AddUser.UseVisualStyleBackColor = true;
-            this.AddUser.Click += new System.EventHandler(this.AddUser_Click);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(145, 327);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Фамилия";
             // 
-            // DeleteUser
+            // label5
             // 
-            this.DeleteUser.Location = new System.Drawing.Point(464, 352);
-            this.DeleteUser.Name = "DeleteUser";
-            this.DeleteUser.Size = new System.Drawing.Size(75, 23);
-            this.DeleteUser.TabIndex = 11;
-            this.DeleteUser.Text = "Delete";
-            this.DeleteUser.UseVisualStyleBackColor = true;
-            this.DeleteUser.Click += new System.EventHandler(this.DeleteUser_Click);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(142, 301);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Имя";
             // 
-            // UpdateUser
+            // userContact
             // 
-            this.UpdateUser.Location = new System.Drawing.Point(464, 323);
-            this.UpdateUser.Name = "UpdateUser";
-            this.UpdateUser.Size = new System.Drawing.Size(75, 23);
-            this.UpdateUser.TabIndex = 12;
-            this.UpdateUser.Text = "Update";
-            this.UpdateUser.UseVisualStyleBackColor = true;
-            this.UpdateUser.Click += new System.EventHandler(this.UpdateUser_Click);
+            this.userContact.Location = new System.Drawing.Point(6, 347);
+            this.userContact.Name = "userContact";
+            this.userContact.Size = new System.Drawing.Size(129, 20);
+            this.userContact.TabIndex = 3;
             // 
-            // Truncate
+            // nameSurname
             // 
-            this.Truncate.Location = new System.Drawing.Point(383, 352);
-            this.Truncate.Name = "Truncate";
-            this.Truncate.Size = new System.Drawing.Size(75, 23);
-            this.Truncate.TabIndex = 13;
-            this.Truncate.Text = "Trunc";
-            this.Truncate.UseVisualStyleBackColor = true;
-            this.Truncate.Click += new System.EventHandler(this.Truncate_Click);
+            this.nameSurname.Location = new System.Drawing.Point(6, 321);
+            this.nameSurname.Name = "nameSurname";
+            this.nameSurname.Size = new System.Drawing.Size(129, 20);
+            this.nameSurname.TabIndex = 2;
             // 
-            // Clear
+            // nameUser
             // 
-            this.Clear.Location = new System.Drawing.Point(383, 323);
-            this.Clear.Name = "Clear";
-            this.Clear.Size = new System.Drawing.Size(75, 23);
-            this.Clear.TabIndex = 14;
-            this.Clear.Text = "Clear";
-            this.Clear.UseVisualStyleBackColor = true;
-            this.Clear.Click += new System.EventHandler(this.Clear_Click);
+            this.nameUser.Location = new System.Drawing.Point(6, 295);
+            this.nameUser.Name = "nameUser";
+            this.nameUser.Size = new System.Drawing.Size(129, 20);
+            this.nameUser.TabIndex = 1;
             // 
-            // idNumeric
+            // dataGridView1
             // 
-            this.idNumeric.Location = new System.Drawing.Point(464, 294);
-            this.idNumeric.Name = "idNumeric";
-            this.idNumeric.Size = new System.Drawing.Size(75, 20);
-            this.idNumeric.TabIndex = 15;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(542, 273);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // refresh
+            // tabPage3
             // 
-            this.refresh.Location = new System.Drawing.Point(302, 352);
-            this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(75, 23);
-            this.refresh.TabIndex = 16;
-            this.refresh.Text = "refresh";
-            this.refresh.UseVisualStyleBackColor = true;
-            this.refresh.Click += new System.EventHandler(this.refresh_Click);
+            this.tabPage3.Controls.Add(this.ExecuteTask12);
+            this.tabPage3.Controls.Add(this.ExportToWord);
+            this.tabPage3.Controls.Add(this.ExportToExcel);
+            this.tabPage3.Controls.Add(this.ExecuteTask11);
+            this.tabPage3.Controls.Add(this.dataGridTask11);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(556, 384);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Group/Having";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // ExportToWord
+            // 
+            this.ExportToWord.Location = new System.Drawing.Point(333, 358);
+            this.ExportToWord.Name = "ExportToWord";
+            this.ExportToWord.Size = new System.Drawing.Size(109, 23);
+            this.ExportToWord.TabIndex = 3;
+            this.ExportToWord.Text = "Сохранить Word";
+            this.ExportToWord.UseVisualStyleBackColor = true;
+            this.ExportToWord.Click += new System.EventHandler(this.ExportToWord_Click);
+            // 
+            // ExportToExcel
+            // 
+            this.ExportToExcel.Location = new System.Drawing.Point(448, 358);
+            this.ExportToExcel.Name = "ExportToExcel";
+            this.ExportToExcel.Size = new System.Drawing.Size(100, 23);
+            this.ExportToExcel.TabIndex = 2;
+            this.ExportToExcel.Text = "Сохранить Excel";
+            this.ExportToExcel.UseVisualStyleBackColor = true;
+            this.ExportToExcel.Click += new System.EventHandler(this.ExportToExcel_Click);
+            // 
+            // ExecuteTask11
+            // 
+            this.ExecuteTask11.Location = new System.Drawing.Point(3, 358);
+            this.ExecuteTask11.Name = "ExecuteTask11";
+            this.ExecuteTask11.Size = new System.Drawing.Size(97, 23);
+            this.ExecuteTask11.TabIndex = 1;
+            this.ExecuteTask11.Text = "Запрос";
+            this.ExecuteTask11.UseVisualStyleBackColor = true;
+            this.ExecuteTask11.Click += new System.EventHandler(this.ExecuteTask11_Click);
+            // 
+            // dataGridTask11
+            // 
+            this.dataGridTask11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridTask11.Location = new System.Drawing.Point(3, 3);
+            this.dataGridTask11.Name = "dataGridTask11";
+            this.dataGridTask11.Size = new System.Drawing.Size(545, 351);
+            this.dataGridTask11.TabIndex = 0;
+            // 
+            // ExecuteTask12
+            // 
+            this.ExecuteTask12.Location = new System.Drawing.Point(106, 358);
+            this.ExecuteTask12.Name = "ExecuteTask12";
+            this.ExecuteTask12.Size = new System.Drawing.Size(97, 23);
+            this.ExecuteTask12.TabIndex = 4;
+            this.ExecuteTask12.Text = "Запрос Having";
+            this.ExecuteTask12.UseVisualStyleBackColor = true;
+            this.ExecuteTask12.Click += new System.EventHandler(this.ExecuteTask12_Click);
             // 
             // Form1
             // 
@@ -385,8 +456,10 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTask11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -424,6 +497,12 @@
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.NumericUpDown idNumeric;
         private System.Windows.Forms.Button refresh;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataGridView dataGridTask11;
+        private System.Windows.Forms.Button ExecuteTask11;
+        private System.Windows.Forms.Button ExportToExcel;
+        private System.Windows.Forms.Button ExportToWord;
+        private System.Windows.Forms.Button ExecuteTask12;
     }
 }
 

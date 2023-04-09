@@ -18,6 +18,8 @@ namespace DataBaseTasks
         private NpgsqlDataAdapter adapter = default;
         private NpgsqlCommand command = default;
 
+        private readonly Service.ReportService reportService = new Service.ReportService();
+
         public Form1()
         {
             InitializeComponent();
@@ -69,5 +71,13 @@ namespace DataBaseTasks
         private void Clear_Click(object sender, EventArgs e) => CleanData();
 
         private void refresh_Click(object sender, EventArgs e) => dataGridView1.DataSource = NpgsqlLogic.DisplayUserData(this.connection, this.adapter);
+
+        private void ExecuteTask11_Click(object sender, EventArgs e) => dataGridTask11.DataSource = new Service.ClientService().FetchOrderGroup(this.adapter, this.connection);
+
+        private void ExportToExcel_Click(object sender, EventArgs e) => reportService.ExportExcel(this.dataGridTask11);
+
+        private void ExportToWord_Click(object sender, EventArgs e) => reportService.ExportWord(this.dataGridTask11);
+
+        private void ExecuteTask12_Click(object sender, EventArgs e) => dataGridTask11.DataSource = new Service.ClientService().FetchOrderHaving(this.adapter, this.connection);
     }
 }

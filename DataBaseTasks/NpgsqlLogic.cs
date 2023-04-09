@@ -12,7 +12,7 @@ namespace DataBaseTasks
 {
     internal class NpgsqlLogic
     {
-                private NpgsqlDataAdapter adapter = default;
+        private NpgsqlDataAdapter adapter = default;
         private NpgsqlCommand command = default;
         public static void AddColumn(string tableName, string columnName,string type,string connectionString)
         {
